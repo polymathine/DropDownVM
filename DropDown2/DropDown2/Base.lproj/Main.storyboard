@@ -31,6 +31,9 @@
                             <outlet property="delegate" destination="my0-yW-3E4" id="UKj-pr-iGT"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="progressView" destination="5jg-ap-QL6" id="7QE-ok-3BT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkU-IT-Qfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

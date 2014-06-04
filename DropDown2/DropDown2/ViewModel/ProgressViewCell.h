@@ -14,4 +14,7 @@
 +(void)addProgressLabel:(UILabel*)progressLabel toView:(UIView*)view;
 +(NSArray*)createToolbarWithLabel:(UILabel*)progressLabel;
 
++(void)startProgress:(UIProgressView*)progressView inNavController:(UINavigationController*)controller andView:(UITableView*)tableView;
++(void)finishedProgress:(UIProgressView*)progressView inNavController:(UINavigationController*)controller andView:(UITableView*)tableView;
+
 @end

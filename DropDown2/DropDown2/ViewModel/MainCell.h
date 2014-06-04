@@ -10,4 +10,5 @@
 
 @interface MainCell : NSObject
 +(void)configureCell:(UITableViewCell*)cell;
++(void)configureDropCell:(UITableViewCell*)cell;
 @end

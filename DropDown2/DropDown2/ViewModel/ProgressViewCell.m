@@ -15,6 +15,7 @@
 
 +(void)addProgressView:(UIProgressView*)progressView withWidth:(CGFloat)myWidth andHeight:(CGFloat)myY
 {
+    progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleBar];
     progressView.frame = CGRectMake(0, myY, myWidth, 10);
     progressView.progress = 0.0;
     
@@ -46,5 +47,20 @@
     //NEED TO ADD THIS BACK IN TO ACTION @selector(onCancelTapped:)
     NSArray *toolbarItems = [NSArray arrayWithObjects:customItem, spaceItem, status, nil];
     return toolbarItems;
+}
+
++(void)startProgress:(UIProgressView*)progressView inNavController:(UINavigationController*)controller andView:(UITableView*)tableView
+{
+    tableView.userInteractionEnabled = NO;
+    controller.toolbarHidden = NO;
+    progressView.hidden = NO;
+    controller.toolbar.backgroundColor = [UIColor whiteColor];
+}
+
++(void)finishedProgress:(UIProgressView*)progressView inNavController:(UINavigationController*)controller andView:(UITableView*)tableView
+{
+    tableView.userInteractionEnabled = YES;
+    progressView.hidden = YES;
+    controller.toolbarHidden = YES;
 }
 @end

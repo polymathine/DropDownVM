@@ -23,4 +23,13 @@
     [cell.textLabel setFont:[UIFont fontWithName:[Fonts fontLight] size:[Fonts buttonFontSize]]];
 }
 
++(void)configureDropCell:(UITableViewCell*)cell
+{
+    [[cell textLabel] setTextColor:[UIColor whiteColor]];
+    [cell.textLabel setFont:[UIFont fontWithName:[Fonts fontLight] size:40]];
+    cell.textLabel.textAlignment = NSTextAlignmentRight;
+    cell.accessoryView = Nil;
+}
+
+
 @end

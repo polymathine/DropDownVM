@@ -37,6 +37,9 @@
 		28943E27193E3D8B005412CA /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E26193E3D8B005412CA /* MainCell.m */; };
 		28943E2C193E40BA005412CA /* minus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 28943E2A193E40BA005412CA /* minus_button.png */; };
 		28943E2D193E40BA005412CA /* plus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 28943E2B193E40BA005412CA /* plus_button.png */; };
+		28D19D67193F4E0F0098BEBD /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D66193F4E0F0098BEBD /* Menu.m */; };
+		28D19D6A193F50B20098BEBD /* NavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D69193F50B20098BEBD /* NavBar.m */; };
+		28D19D6F193F52C40098BEBD /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D6E193F52C40098BEBD /* HeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,12 @@
 		28943E26193E3D8B005412CA /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
 		28943E2A193E40BA005412CA /* minus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus_button.png; sourceTree = "<group>"; };
 		28943E2B193E40BA005412CA /* plus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_button.png; sourceTree = "<group>"; };
+		28D19D65193F4E0F0098BEBD /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		28D19D66193F4E0F0098BEBD /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
+		28D19D68193F50B20098BEBD /* NavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBar.h; sourceTree = "<group>"; };
+		28D19D69193F50B20098BEBD /* NavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBar.m; sourceTree = "<group>"; };
+		28D19D6D193F52C40098BEBD /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		28D19D6E193F52C40098BEBD /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,19 +234,9 @@
 		28943DF9193E1A7B005412CA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				28D19D6B193F52440098BEBD /* ViewComponents */,
 				28943E0C193E29B3005412CA /* Design */,
-				28943DFA193E1B2A005412CA /* DeleteRows.h */,
-				28943DFB193E1B2A005412CA /* DeleteRows.m */,
-				28943E06193E21F4005412CA /* RetractUp.h */,
-				28943E07193E21F4005412CA /* RetractUp.m */,
-				28943DFD193E1D43005412CA /* ExpandDown.h */,
-				28943DFE193E1D43005412CA /* ExpandDown.m */,
-				28943E03193E2141005412CA /* AccessoryView.h */,
-				28943E04193E2141005412CA /* AccessoryView.m */,
-				28943E09193E23D2005412CA /* ProgressViewCell.h */,
-				28943E0A193E23D2005412CA /* ProgressViewCell.m */,
-				28943E25193E3D8B005412CA /* MainCell.h */,
-				28943E26193E3D8B005412CA /* MainCell.m */,
+				28D19D6C193F52790098BEBD /* ViewFunctionality */,
 			);
 			name = ViewModel;
 			path = /Users/abby/DropDownVM/DropDown2/DropDown2/ViewModel;
@@ -277,6 +276,38 @@
 				28943E2B193E40BA005412CA /* plus_button.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		28D19D6B193F52440098BEBD /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				28D19D65193F4E0F0098BEBD /* Menu.h */,
+				28D19D66193F4E0F0098BEBD /* Menu.m */,
+				28D19D68193F50B20098BEBD /* NavBar.h */,
+				28D19D69193F50B20098BEBD /* NavBar.m */,
+				28943E03193E2141005412CA /* AccessoryView.h */,
+				28943E04193E2141005412CA /* AccessoryView.m */,
+				28943E09193E23D2005412CA /* ProgressViewCell.h */,
+				28943E0A193E23D2005412CA /* ProgressViewCell.m */,
+				28943E25193E3D8B005412CA /* MainCell.h */,
+				28943E26193E3D8B005412CA /* MainCell.m */,
+				28D19D6D193F52C40098BEBD /* HeaderView.h */,
+				28D19D6E193F52C40098BEBD /* HeaderView.m */,
+			);
+			name = ViewComponents;
+			sourceTree = "<group>";
+		};
+		28D19D6C193F52790098BEBD /* ViewFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+				28943E06193E21F4005412CA /* RetractUp.h */,
+				28943E07193E21F4005412CA /* RetractUp.m */,
+				28943DFD193E1D43005412CA /* ExpandDown.h */,
+				28943DFE193E1D43005412CA /* ExpandDown.m */,
+				28943DFA193E1B2A005412CA /* DeleteRows.h */,
+				28943DFB193E1B2A005412CA /* DeleteRows.m */,
+			);
+			name = ViewFunctionality;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,11 +413,14 @@
 				28943E21193E3446005412CA /* SectionArrays.m in Sources */,
 				28943E0B193E23D2005412CA /* ProgressViewCell.m in Sources */,
 				28943E18193E2B3F005412CA /* Logos.m in Sources */,
+				28D19D6A193F50B20098BEBD /* NavBar.m in Sources */,
 				28943E1B193E2BA2005412CA /* CellStyles.m in Sources */,
 				28943DD9193E189A005412CA /* ViewController.m in Sources */,
 				28943DFC193E1B2A005412CA /* DeleteRows.m in Sources */,
 				28943E0F193E29C7005412CA /* Fonts.m in Sources */,
+				28D19D67193F4E0F0098BEBD /* Menu.m in Sources */,
 				28943DFF193E1D43005412CA /* ExpandDown.m in Sources */,
+				28D19D6F193F52C40098BEBD /* HeaderView.m in Sources */,
 				28943E02193E1FEF005412CA /* Sections.m in Sources */,
 				28943E1E193E31F0005412CA /* Buttons.m in Sources */,
 				28943E12193E2A86005412CA /* TableHeights.m in Sources */,
@@ -600,6 +634,7 @@
 				28943DF3193E189A005412CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28943DF4193E189A005412CA /* Build configuration list for PBXNativeTarget "DropDown2Tests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +643,7 @@
 				28943DF6193E189A005412CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
