@@ -17,8 +17,6 @@
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
     cell.accessoryView = [AccessoryView customAccessoryViewFor:[UIImage imageNamed:@"plus_button.png"]];
     
-   // theSection.down = NO; ISSUE IF THIS NEEDS TO BE HERE AND NOT JUST DONE THROUGH RETURN VALUE!!!!
-    
     for (int i=([theSection.currentTitles count]-1); i>0; i--)
     {
         [theSection.currentTitles removeObjectAtIndex:i];
