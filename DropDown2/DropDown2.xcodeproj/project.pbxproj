@@ -37,6 +37,9 @@
 		28943E27193E3D8B005412CA /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E26193E3D8B005412CA /* MainCell.m */; };
 		28943E2C193E40BA005412CA /* minus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 28943E2A193E40BA005412CA /* minus_button.png */; };
 		28943E2D193E40BA005412CA /* plus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 28943E2B193E40BA005412CA /* plus_button.png */; };
+		2897503F19470C2A004F3269 /* Lato-Lig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2897503E19470C2A004F3269 /* Lato-Lig.ttf */; };
+		2897504219470C6F004F3269 /* Lato-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2897504019470C6F004F3269 /* Lato-Bla.ttf */; };
+		2897504319470C6F004F3269 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2897504119470C6F004F3269 /* Lato-Reg.ttf */; };
 		28D19D67193F4E0F0098BEBD /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D66193F4E0F0098BEBD /* Menu.m */; };
 		28D19D6A193F50B20098BEBD /* NavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D69193F50B20098BEBD /* NavBar.m */; };
 		28D19D6F193F52C40098BEBD /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D6E193F52C40098BEBD /* HeaderView.m */; };
@@ -102,6 +105,9 @@
 		28943E26193E3D8B005412CA /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
 		28943E2A193E40BA005412CA /* minus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus_button.png; sourceTree = "<group>"; };
 		28943E2B193E40BA005412CA /* plus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_button.png; sourceTree = "<group>"; };
+		2897503E19470C2A004F3269 /* Lato-Lig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Lig.ttf"; path = "../Lato-Lig.ttf"; sourceTree = "<group>"; };
+		2897504019470C6F004F3269 /* Lato-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bla.ttf"; path = "../Lato-Bla.ttf"; sourceTree = "<group>"; };
+		2897504119470C6F004F3269 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Reg.ttf"; path = "../Lato-Reg.ttf"; sourceTree = "<group>"; };
 		28D19D65193F4E0F0098BEBD /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		28D19D66193F4E0F0098BEBD /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		28D19D68193F50B20098BEBD /* NavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBar.h; sourceTree = "<group>"; };
@@ -264,6 +270,9 @@
 		28943E28193E40A0005412CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2897504019470C6F004F3269 /* Lato-Bla.ttf */,
+				2897504119470C6F004F3269 /* Lato-Reg.ttf */,
+				2897503E19470C2A004F3269 /* Lato-Lig.ttf */,
 				28943E29193E40AA005412CA /* Images */,
 			);
 			name = Resources;
@@ -389,8 +398,11 @@
 				28943DDB193E189A005412CA /* Images.xcassets in Resources */,
 				28943DCD193E189A005412CA /* InfoPlist.strings in Resources */,
 				28943E2D193E40BA005412CA /* plus_button.png in Resources */,
+				2897504319470C6F004F3269 /* Lato-Reg.ttf in Resources */,
 				28943E2C193E40BA005412CA /* minus_button.png in Resources */,
+				2897504219470C6F004F3269 /* Lato-Bla.ttf in Resources */,
 				28943DD6193E189A005412CA /* Main.storyboard in Resources */,
+				2897503F19470C2A004F3269 /* Lato-Lig.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
