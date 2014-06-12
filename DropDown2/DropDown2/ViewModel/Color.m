@@ -18,8 +18,9 @@
 
 +(UIColor*)colorTwo
 {
-    //UIColor *theColor = [UIColor colorWithRed:0.251 green:0.4 blue:0.094 alpha:1.0];
-    UIColor *theColor = [UIColor colorWithRed:0 green:0.573 blue:0.271 alpha:1]; /*hex #009245*/
+    //UIColor *theColor = [UIColor colorWithRed:0 green:0.573 blue:0.271 alpha:1]; /*hex #009245*/
+    UIColor *theColor = [UIColor whiteColor];
+
     
     return theColor;
 }
@@ -33,8 +34,8 @@
 
 +(UIColor*)fontColor
 {
-    UIColor *theColor = [UIColor colorWithRed:85/255.0 green:85/255.0 blue:85/255.0 alpha:1];
-    //[UIColor grayColor];
+    //UIColor *theColor = [UIColor colorWithRed:85/255.0 green:85/255.0 blue:85/255.0 alpha:1];
+    UIColor *theColor = [UIColor blackColor];
     
     return theColor;
 }

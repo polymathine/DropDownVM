@@ -15,7 +15,7 @@
 
 +(BOOL)expandSection:(Sections*)theSection forCell:(UITableViewCell*)cell atIndex:(NSIndexPath*)indexPath inTableView:(UITableView*)tableView
 {
-    cell.accessoryView = [AccessoryView customAccessoryViewFor:[UIImage imageNamed:@"minus_button.png"]];
+    cell.accessoryView = [AccessoryView customAccessoryViewFor:[UIImage imageNamed:@"minus_button_b.png"]];
     
     for (int i=1; i<[theSection.titles count]; i++) {
         [theSection.currentTitles insertObject:[theSection.titles objectAtIndex:i] atIndex:i];
