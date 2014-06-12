@@ -52,16 +52,7 @@
     return [RetractUp retractSection:self.section forCell:cell atIndex:self.indexPath inTableView:self.tableView];
 }
 
-+(void)configureDropCell:(UITableViewCell*)cell
-{
-    [[cell textLabel] setTextColor:[Color fontColor]];
-    [cell.textLabel setFont:[UIFont fontWithName:[Fonts fontLight] size:40]];
-    cell.textLabel.textAlignment = NSTextAlignmentRight;
-    cell.accessoryView = Nil;
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    [cell.contentView.layer setBorderWidth:4.0f];
-    [cell.contentView.layer setBorderColor:[UIColor yellowColor].CGColor];
-}
+
 
 
 

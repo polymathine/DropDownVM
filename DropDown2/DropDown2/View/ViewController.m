@@ -17,6 +17,7 @@
 #import "Menu.h"
 #import "NavBar.h"
 #import "HeaderView.h"
+#import "DropCell.h"
 
 @interface ViewController ()
 @property (nonatomic, retain) NSMutableArray *sections;
@@ -27,6 +28,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *progressLabel;
 @property (nonatomic) NSInteger selectedSection;
 @property (nonatomic, strong) MainCell *mainCell;
+@property (nonatomic, strong) DropCell *dropCell;
 @end
 
 @implementation ViewController
@@ -103,14 +105,15 @@
     // Configure the cell.
     
     self.theSection = [self.dictionary objectForKey:[NSString stringWithFormat:@"%li",(long)[indexPath section]]];
-    self.mainCell = [[MainCell alloc] initMainCellThatHasIndexPath:indexPath inTableView:self.tableView forSection:self.theSection];
+    self.mainCell = [[MainCell alloc] init];
     [self.mainCell configureMainCell:cell];
     
     [[cell textLabel] setText:[self.theSection.currentTitles objectAtIndex:[indexPath row]]];
     
     //for all drop down parts of table change color of background so it's obvious
     if ([indexPath row] >0) {
-        [MainCell configureDropCell:cell];
+        self.dropCell = [[DropCell alloc] init];
+        [self.dropCell configureDropCell:cell];
     }
     return cell;
 }

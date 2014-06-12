@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		284E0CB71949D4530027B47A /* DropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284E0CB61949D4530027B47A /* DropCell.m */; };
+		284E0CBB1949E2CC0027B47A /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 284E0CBA1949E2CC0027B47A /* ProgressView.m */; };
 		28943DC3193E1899005412CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28943DC2193E1899005412CA /* Foundation.framework */; };
 		28943DC5193E1899005412CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28943DC4193E1899005412CA /* CoreGraphics.framework */; };
 		28943DC7193E1899005412CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28943DC6193E1899005412CA /* UIKit.framework */; };
@@ -60,6 +61,8 @@
 /* Begin PBXFileReference section */
 		284E0CB51949D4530027B47A /* DropCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropCell.h; sourceTree = "<group>"; };
 		284E0CB61949D4530027B47A /* DropCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropCell.m; sourceTree = "<group>"; };
+		284E0CB91949E2CC0027B47A /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		284E0CBA1949E2CC0027B47A /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		28943DBF193E1899005412CA /* DropDown2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropDown2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28943DC2193E1899005412CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28943DC4193E1899005412CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -144,6 +147,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		284E0CB81949DE7B0027B47A /* CellTypes */ = {
+			isa = PBXGroup;
+			children = (
+				28943E25193E3D8B005412CA /* MainCell.h */,
+				28943E26193E3D8B005412CA /* MainCell.m */,
+				284E0CB51949D4530027B47A /* DropCell.h */,
+				284E0CB61949D4530027B47A /* DropCell.m */,
+				284E0CB91949E2CC0027B47A /* ProgressView.h */,
+				284E0CBA1949E2CC0027B47A /* ProgressView.m */,
+				28D19D6C193F52790098BEBD /* ViewFunctionality */,
+			);
+			name = CellTypes;
+			sourceTree = "<group>";
+		};
 		28943DB6193E1899005412CA = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +265,7 @@
 			children = (
 				28D19D6B193F52440098BEBD /* ViewComponents */,
 				28943E0C193E29B3005412CA /* Design */,
-				28D19D6C193F52790098BEBD /* ViewFunctionality */,
+				284E0CB81949DE7B0027B47A /* CellTypes */,
 			);
 			name = ViewModel;
 			path = /Users/abby/DropDownVM/DropDown2/DropDown2/ViewModel;
@@ -302,10 +319,6 @@
 				28943E04193E2141005412CA /* AccessoryView.m */,
 				28943E09193E23D2005412CA /* ProgressViewCell.h */,
 				28943E0A193E23D2005412CA /* ProgressViewCell.m */,
-				28943E25193E3D8B005412CA /* MainCell.h */,
-				28943E26193E3D8B005412CA /* MainCell.m */,
-				284E0CB51949D4530027B47A /* DropCell.h */,
-				284E0CB61949D4530027B47A /* DropCell.m */,
 				28D19D6D193F52C40098BEBD /* HeaderView.h */,
 				28D19D6E193F52C40098BEBD /* HeaderView.m */,
 			);
@@ -434,6 +447,7 @@
 				28943E0B193E23D2005412CA /* ProgressViewCell.m in Sources */,
 				28943E18193E2B3F005412CA /* Logos.m in Sources */,
 				28D19D6A193F50B20098BEBD /* NavBar.m in Sources */,
+				284E0CBB1949E2CC0027B47A /* ProgressView.m in Sources */,
 				28943DD9193E189A005412CA /* ViewController.m in Sources */,
 				28943DFC193E1B2A005412CA /* DeleteRows.m in Sources */,
 				28943E0F193E29C7005412CA /* Fonts.m in Sources */,

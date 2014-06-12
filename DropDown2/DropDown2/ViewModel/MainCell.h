@@ -11,10 +11,10 @@
 
 
 @interface MainCell : UITableViewCell
+
 -(instancetype)initMainCellThatHasIndexPath:(NSIndexPath*)indexPath inTableView:(UITableView*)tableView forSection:(Sections*)section;
 -(void)configureMainCell:(UITableViewCell*)cell;
 -(BOOL)expandCellsFrom:(UITableViewCell*)cell;
 -(BOOL)retractCellsUpTo:(UITableViewCell*)cell;
 
-+(void)configureDropCell:(UITableViewCell*)cell;
 @end

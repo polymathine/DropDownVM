@@ -11,6 +11,7 @@
 #import "Fonts.h"
 
 @implementation DropCell
+
 -(void)configureDropCell:(UITableViewCell*)cell
 {
     [[cell textLabel] setTextColor:[Color fontColor]];

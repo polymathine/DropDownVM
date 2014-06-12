@@ -1,5 +1,5 @@
 //
-//  DropCell.h
+//  ProgressView.h
 //  DropDown2
 //
 //  Created by Abby Schlageter on 12/06/2014.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DropCell : NSObject
+@interface ProgressView : NSObject
+-(void)setUpProgressBarCell:(UITableViewCell*)cell;
 
--(void)configureDropCell:(UITableViewCell*)cell;
 @end
