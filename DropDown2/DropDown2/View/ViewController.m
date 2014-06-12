@@ -26,6 +26,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *but;
 @property (nonatomic, retain) IBOutlet UILabel *progressLabel;
 @property (nonatomic) NSInteger selectedSection;
+@property (nonatomic, strong) MainCell *mainCell;
 @end
 
 @implementation ViewController
@@ -92,14 +93,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView setSeparatorColor:[UIColor clearColor]];
+    
     static NSString *CellIdentifier = @"Main";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
     // Configure the cell.
-    [MainCell configureCell:cell];
+    
     self.theSection = [self.dictionary objectForKey:[NSString stringWithFormat:@"%li",(long)[indexPath section]]];
+    self.mainCell = [[MainCell alloc] initMainCellThatHasIndexPath:indexPath inTableView:self.tableView forSection:self.theSection];
+    [self.mainCell configureMainCell:cell];
+    
     [[cell textLabel] setText:[self.theSection.currentTitles objectAtIndex:[indexPath row]]];
     
     //for all drop down parts of table change color of background so it's obvious
@@ -125,16 +131,18 @@
     NSLog(@"down 1? = %i", self.theSection.down);
     NSLog(@"objectForKey: %@",[NSString stringWithFormat:@"%li",(long)[indexPath section]]);
     //row0
+    self.mainCell = [[MainCell alloc] initMainCellThatHasIndexPath:indexPath inTableView:self.tableView forSection:self.theSection];
     if ([indexPath row] == 0 && self.theSection.down == NO)
     {
         self.selectedSection = indexPath.section;
-        self.theSection.down = [ExpandDown expandSection:self.theSection forCell:cell atIndex:indexPath inTableView:self.tableView];
+       // self.theSection.down = [ExpandDown expandSection:self.theSection forCell:cell atIndex:indexPath inTableView:self.tableView];
+        self.theSection.down = [self.mainCell expandCellsFrom:cell];
         NSLog(@"down 2a? = %i", self.theSection.down);
     }
     
     else if ([indexPath row] == 0 && self.theSection.down == YES && [self.theSection.currentTitles count] >1)
     {
-        self.theSection.down = [RetractUp retractSection:self.theSection forCell:cell atIndex:indexPath inTableView:self.tableView];
+        self.theSection.down = [self.mainCell retractCellsUpTo:cell];
 
         NSLog(@"down 2b? = %i", self.theSection.down);
         self.selectedSection = 1100; //set to a number far outside the bounds of the number of sections that actually exist

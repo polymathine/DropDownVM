@@ -11,10 +11,28 @@
 #import "Fonts.h"
 #import "Color.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ExpandDown.h"
+#import "RetractUp.h"
+
+@interface MainCell ()
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) Sections *section;
+@end
 
 @implementation MainCell
+-(instancetype)initMainCellThatHasIndexPath:(NSIndexPath*)indexPath inTableView:(UITableView*)tableView forSection:(Sections*)section
+{
+    if(self = [super init])
+    {
+        _indexPath = indexPath;
+        _tableView = tableView;
+        _section = section;
+    }
+    return self;
+}
 
-+(void)configureCell:(UITableViewCell*)cell
+-(void)configureMainCell:(UITableViewCell*)cell
 {
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryView = [AccessoryView customAccessoryViewFor:[UIImage imageNamed:@"plus_button_b.png"]];
@@ -22,6 +40,16 @@
     cell.textLabel.textColor = [Color fontColor];
     [cell.textLabel setFont:[UIFont fontWithName:[Fonts fontLight] size:[Fonts buttonFontSize]]];
 
+}
+
+-(BOOL)expandCellsFrom:(UITableViewCell*)cell
+{
+    return [ExpandDown expandSection:self.section forCell:cell atIndex:self.indexPath inTableView:self.tableView];
+}
+
+-(BOOL)retractCellsUpTo:(UITableViewCell*)cell
+{
+    return [RetractUp retractSection:self.section forCell:cell atIndex:self.indexPath inTableView:self.tableView];
 }
 
 +(void)configureDropCell:(UITableViewCell*)cell
