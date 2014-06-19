@@ -7,7 +7,6 @@
 //
 
 #import "RetractUp.h"
-#import "DeleteRows.h"
 #import "AccessoryView.h"
 
 @implementation RetractUp
@@ -20,11 +19,20 @@
     for (int i=([theSection.currentTitles count]-1); i>0; i--)
     {
         [theSection.currentTitles removeObjectAtIndex:i];
-        [DeleteRows deleteFromRow:i section:[indexPath section] inTableView:tableView];
+        [RetractUp deleteFromRow:i section:[indexPath section] inTableView:tableView];
     }
     NSLog(@"down 2b? = %i", theSection.down);
     
     return NO;
+}
+
++ (void)deleteFromRow:(NSInteger)row section:(NSInteger)section inTableView:(UITableView*)tableView
+{
+    NSArray *deleteIndexPaths = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:row inSection:section], nil];
+    
+    [tableView beginUpdates];
+    [tableView deleteRowsAtIndexPaths:deleteIndexPaths withRowAnimation:UITableViewRowAnimationFade];
+    [tableView endUpdates];
 }
 
 

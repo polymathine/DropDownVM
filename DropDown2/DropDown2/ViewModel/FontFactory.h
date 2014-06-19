@@ -1,5 +1,5 @@
 //
-//  Fonts.h
+//  FontFactory.h
 //  DropDown2
 //
 //  Created by Abby Schlageter on 03/06/2014.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Fonts : NSObject
+@interface FontFactory : NSObject
 
 +(NSString*)fontLight;
 +(NSString*)fontBold;

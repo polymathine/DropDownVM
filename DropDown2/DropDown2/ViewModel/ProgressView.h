@@ -10,5 +10,7 @@
 
 @interface ProgressView : NSObject
 -(void)setUpProgressBarCell:(UITableViewCell*)cell;
-
+-(instancetype)initProgressView:(UIProgressView*)progressView inView:(UIView*)view withTableView:(UITableView*)tableView withLabel:(UILabel*)label andNavController:(UINavigationController*)controller;
+-(void)launchProgressView;
+-(void)endProgressView;
 @end

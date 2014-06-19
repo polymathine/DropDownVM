@@ -7,16 +7,15 @@
 //
 
 #import "NavBar.h"
-#import "Fonts.h"
+#import "FontFactory.h"
 #import "Color.h"
 
 @implementation NavBar
 
 +(NSMutableDictionary*)navBarTitleSetup
 {
-    //Font for Navigation Bar Title
     NSMutableDictionary *titleAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
-    [titleAttributes setValue:[UIFont fontWithName:[Fonts fontLight] size:[Fonts generalFontSize]] forKey:NSFontAttributeName];
+    [titleAttributes setValue:[UIFont fontWithName:[FontFactory fontLight] size:[FontFactory generalFontSize]] forKey:NSFontAttributeName];
 
     return titleAttributes;
 }
@@ -25,10 +24,11 @@
 +(NSMutableDictionary*)navBarButtonSetup
 {
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
-    [attributes setValue:[UIFont fontWithName:[Fonts fontBold] size:[Fonts smallFontSize]] forKey:NSFontAttributeName];
+    [attributes setValue:[UIFont fontWithName:[FontFactory fontBold] size:[FontFactory smallFontSize]] forKey:NSFontAttributeName];
     [attributes setValue:[Color fontColor] forKey:NSForegroundColorAttributeName];
     
     return attributes;
+
 }
 
 

@@ -7,7 +7,6 @@
 //
 
 #import "ExpandDown.h"
-#import "DeleteRows.h"
 #import "AccessoryView.h"
 
 @implementation ExpandDown
@@ -19,10 +18,21 @@
     
     for (int i=1; i<[theSection.titles count]; i++) {
         [theSection.currentTitles insertObject:[theSection.titles objectAtIndex:i] atIndex:i];
-        [DeleteRows insertFromRow:i section:[indexPath section] inTableView:tableView];
+        [ExpandDown insertFromRow:i section:[indexPath section] inTableView:tableView];
     }
     return YES;
 }
+
++ (void)insertFromRow:(NSInteger)row section:(NSInteger)section inTableView:(UITableView*)tableView
+{
+    NSArray *insertIndexPaths = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:row inSection:section], nil];
+    
+    [tableView beginUpdates];
+    [tableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationFade];
+    [tableView endUpdates];
+    
+}
+
 
 
 @end

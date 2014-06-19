@@ -7,7 +7,7 @@
 //
 
 #import "ProgressView.h"
-#import "Fonts.h"
+#import "FontFactory.h"
 #import "Color.h"
 #import "Buttons.h"
 
@@ -73,12 +73,9 @@
     self.controller.toolbarHidden = YES;
 }
 
-
-
 -(void)configureProgressLabel:(UILabel*)progressLabel
 {
-    progressLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 11.0f, (self.view.frame.size.width/2), 21.0f)];
-    [progressLabel setFont:[UIFont fontWithName:[Fonts fontLight] size:18]];
+    [progressLabel setFont:[UIFont fontWithName:[FontFactory fontLight] size:[FontFactory generalFontSize]]];
     [progressLabel setBackgroundColor:[UIColor clearColor]];
     [progressLabel setTextColor:[Color navColor]];
     [progressLabel setTextAlignment:NSTextAlignmentRight];

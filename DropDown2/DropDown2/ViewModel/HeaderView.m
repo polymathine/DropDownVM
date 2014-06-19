@@ -7,7 +7,7 @@
 //
 
 #import "HeaderView.h"
-#import "Logos.h"
+#import "LogoFactory.h"
 
 @implementation HeaderView
 +(UIButton*)headerButtonForView:(UITableView*)tableView
@@ -17,7 +17,7 @@
     UIButton *but=[UIButton buttonWithType:UIButtonTypeCustom];
     but.frame= CGRectMake(0.0, 20.0, 320.0, 120.0);
     
-    [but setImage:[UIImage imageWithContentsOfFile:[Logos mainLogo]] forState:UIControlStateNormal];
+    [but setImage:[UIImage imageWithContentsOfFile:[LogoFactory mainLogo]] forState:UIControlStateNormal];
     return but;
 }
 

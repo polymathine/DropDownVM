@@ -10,7 +10,7 @@
 #import "Sections.h"
 
 
-@interface MainCell : UITableViewCell
+@interface MainCell : NSObject
 
 -(instancetype)initMainCellThatHasIndexPath:(NSIndexPath*)indexPath inTableView:(UITableView*)tableView forSection:(Sections*)section;
 -(void)configureMainCell:(UITableViewCell*)cell;

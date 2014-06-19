@@ -8,7 +8,7 @@
 
 #import "MainCell.h"
 #import "AccessoryView.h"
-#import "Fonts.h"
+#import "FontFactory.h"
 #import "Color.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ExpandDown.h"
@@ -38,7 +38,7 @@
     cell.accessoryView = [AccessoryView customAccessoryViewFor:[UIImage imageNamed:@"plus_button_b.png"]];
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     cell.textLabel.textColor = [Color fontColor];
-    [cell.textLabel setFont:[UIFont fontWithName:[Fonts fontLight] size:[Fonts buttonFontSize]]];
+    [cell.textLabel setFont:[UIFont fontWithName:[FontFactory fontLight] size:[FontFactory buttonFontSize]]];
 
 }
 

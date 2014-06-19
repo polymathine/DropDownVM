@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Logos : NSObject
+@interface LogoFactory : NSObject
 
 +(NSString*)mainLogo;
 +(NSString*)whiteTextLogo;

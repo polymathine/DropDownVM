@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Abby Schlageter. All rights reserved.
 //
 
-#import "Logos.h"
+#import "LogoFactory.h"
 
-@implementation Logos
+@implementation LogoFactory
 
 +(NSString*)mainLogo
 {

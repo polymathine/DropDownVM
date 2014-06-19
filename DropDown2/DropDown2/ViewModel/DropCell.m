@@ -8,14 +8,14 @@
 
 #import "DropCell.h"
 #import "Color.h"
-#import "Fonts.h"
+#import "FontFactory.h"
 
 @implementation DropCell
 
 -(void)configureDropCell:(UITableViewCell*)cell
 {
     [[cell textLabel] setTextColor:[Color fontColor]];
-    [cell.textLabel setFont:[UIFont fontWithName:[Fonts fontLight] size:40]];
+    [cell.textLabel setFont:[UIFont fontWithName:[FontFactory fontLight] size:[FontFactory buttonFontSize]]];
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     cell.accessoryView = Nil;
     cell.selectionStyle = UITableViewCellSelectionStyleGray;

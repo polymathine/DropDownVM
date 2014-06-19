@@ -23,16 +23,14 @@
 		28943DE4193E189A005412CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28943DC6193E1899005412CA /* UIKit.framework */; };
 		28943DEC193E189A005412CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28943DEA193E189A005412CA /* InfoPlist.strings */; };
 		28943DEE193E189A005412CA /* DropDown2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943DED193E189A005412CA /* DropDown2Tests.m */; };
-		28943DFC193E1B2A005412CA /* DeleteRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943DFB193E1B2A005412CA /* DeleteRows.m */; };
 		28943DFF193E1D43005412CA /* ExpandDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943DFE193E1D43005412CA /* ExpandDown.m */; };
 		28943E02193E1FEF005412CA /* Sections.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E01193E1FEF005412CA /* Sections.m */; };
 		28943E05193E2141005412CA /* AccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E04193E2141005412CA /* AccessoryView.m */; };
 		28943E08193E21F4005412CA /* RetractUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E07193E21F4005412CA /* RetractUp.m */; };
-		28943E0B193E23D2005412CA /* ProgressViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E0A193E23D2005412CA /* ProgressViewCell.m */; };
-		28943E0F193E29C7005412CA /* Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E0E193E29C7005412CA /* Fonts.m */; };
+		28943E0F193E29C7005412CA /* FontFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E0E193E29C7005412CA /* FontFactory.m */; };
 		28943E12193E2A86005412CA /* TableHeights.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E11193E2A86005412CA /* TableHeights.m */; };
 		28943E15193E2ACA005412CA /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E14193E2ACA005412CA /* Color.m */; };
-		28943E18193E2B3F005412CA /* Logos.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E17193E2B3F005412CA /* Logos.m */; };
+		28943E18193E2B3F005412CA /* LogoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E17193E2B3F005412CA /* LogoFactory.m */; };
 		28943E1E193E31F0005412CA /* Buttons.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E1D193E31F0005412CA /* Buttons.m */; };
 		28943E21193E3446005412CA /* SectionArrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E20193E3446005412CA /* SectionArrays.m */; };
 		28943E27193E3D8B005412CA /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28943E26193E3D8B005412CA /* MainCell.m */; };
@@ -43,6 +41,7 @@
 		2897504319470C6F004F3269 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2897504119470C6F004F3269 /* Lato-Reg.ttf */; };
 		2897504619471633004F3269 /* minus_button_b.png in Resources */ = {isa = PBXBuildFile; fileRef = 2897504419471633004F3269 /* minus_button_b.png */; };
 		2897504719471633004F3269 /* plus_button_b.png in Resources */ = {isa = PBXBuildFile; fileRef = 2897504519471633004F3269 /* plus_button_b.png */; };
+		289DAA1B195304A9002E4B78 /* NavFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 289DAA1A195304A9002E4B78 /* NavFactory.m */; };
 		28D19D67193F4E0F0098BEBD /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D66193F4E0F0098BEBD /* Menu.m */; };
 		28D19D6A193F50B20098BEBD /* NavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D69193F50B20098BEBD /* NavBar.m */; };
 		28D19D6F193F52C40098BEBD /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D19D6E193F52C40098BEBD /* HeaderView.m */; };
@@ -82,8 +81,6 @@
 		28943DE9193E189A005412CA /* DropDown2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropDown2Tests-Info.plist"; sourceTree = "<group>"; };
 		28943DEB193E189A005412CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		28943DED193E189A005412CA /* DropDown2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropDown2Tests.m; sourceTree = "<group>"; };
-		28943DFA193E1B2A005412CA /* DeleteRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteRows.h; sourceTree = "<group>"; };
-		28943DFB193E1B2A005412CA /* DeleteRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteRows.m; sourceTree = "<group>"; };
 		28943DFD193E1D43005412CA /* ExpandDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandDown.h; sourceTree = "<group>"; };
 		28943DFE193E1D43005412CA /* ExpandDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandDown.m; sourceTree = "<group>"; };
 		28943E00193E1FEF005412CA /* Sections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sections.h; sourceTree = "<group>"; };
@@ -92,16 +89,14 @@
 		28943E04193E2141005412CA /* AccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryView.m; sourceTree = "<group>"; };
 		28943E06193E21F4005412CA /* RetractUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetractUp.h; sourceTree = "<group>"; };
 		28943E07193E21F4005412CA /* RetractUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetractUp.m; sourceTree = "<group>"; };
-		28943E09193E23D2005412CA /* ProgressViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewCell.h; sourceTree = "<group>"; };
-		28943E0A193E23D2005412CA /* ProgressViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewCell.m; sourceTree = "<group>"; };
-		28943E0D193E29C7005412CA /* Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fonts.h; sourceTree = "<group>"; };
-		28943E0E193E29C7005412CA /* Fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fonts.m; sourceTree = "<group>"; };
+		28943E0D193E29C7005412CA /* FontFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontFactory.h; sourceTree = "<group>"; };
+		28943E0E193E29C7005412CA /* FontFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontFactory.m; sourceTree = "<group>"; };
 		28943E10193E2A86005412CA /* TableHeights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableHeights.h; sourceTree = "<group>"; };
 		28943E11193E2A86005412CA /* TableHeights.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableHeights.m; sourceTree = "<group>"; };
 		28943E13193E2ACA005412CA /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		28943E14193E2ACA005412CA /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
-		28943E16193E2B3F005412CA /* Logos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logos.h; sourceTree = "<group>"; };
-		28943E17193E2B3F005412CA /* Logos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logos.m; sourceTree = "<group>"; };
+		28943E16193E2B3F005412CA /* LogoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoFactory.h; sourceTree = "<group>"; };
+		28943E17193E2B3F005412CA /* LogoFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoFactory.m; sourceTree = "<group>"; };
 		28943E1C193E31F0005412CA /* Buttons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buttons.h; sourceTree = "<group>"; };
 		28943E1D193E31F0005412CA /* Buttons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buttons.m; sourceTree = "<group>"; };
 		28943E1F193E3446005412CA /* SectionArrays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionArrays.h; sourceTree = "<group>"; };
@@ -115,6 +110,8 @@
 		2897504119470C6F004F3269 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Reg.ttf"; path = "../Lato-Reg.ttf"; sourceTree = "<group>"; };
 		2897504419471633004F3269 /* minus_button_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus_button_b.png; sourceTree = "<group>"; };
 		2897504519471633004F3269 /* plus_button_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_button_b.png; sourceTree = "<group>"; };
+		289DAA19195304A9002E4B78 /* NavFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavFactory.h; sourceTree = "<group>"; };
+		289DAA1A195304A9002E4B78 /* NavFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavFactory.m; sourceTree = "<group>"; };
 		28D19D65193F4E0F0098BEBD /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = ../ViewModel/Menu.h; sourceTree = "<group>"; };
 		28D19D66193F4E0F0098BEBD /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Menu.m; path = ../ViewModel/Menu.m; sourceTree = "<group>"; };
 		28D19D68193F50B20098BEBD /* NavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBar.h; sourceTree = "<group>"; };
@@ -154,9 +151,7 @@
 				28943E26193E3D8B005412CA /* MainCell.m */,
 				284E0CB51949D4530027B47A /* DropCell.h */,
 				284E0CB61949D4530027B47A /* DropCell.m */,
-				284E0CB91949E2CC0027B47A /* ProgressView.h */,
-				284E0CBA1949E2CC0027B47A /* ProgressView.m */,
-				28D19D6C193F52790098BEBD /* ViewFunctionality */,
+				28D19D6C193F52790098BEBD /* CellFunctionality */,
 			);
 			name = CellTypes;
 			sourceTree = "<group>";
@@ -274,14 +269,12 @@
 		28943E0C193E29B3005412CA /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				28943E0D193E29C7005412CA /* Fonts.h */,
-				28943E0E193E29C7005412CA /* Fonts.m */,
-				28943E10193E2A86005412CA /* TableHeights.h */,
-				28943E11193E2A86005412CA /* TableHeights.m */,
+				28943E0D193E29C7005412CA /* FontFactory.h */,
+				28943E0E193E29C7005412CA /* FontFactory.m */,
 				28943E13193E2ACA005412CA /* Color.h */,
 				28943E14193E2ACA005412CA /* Color.m */,
-				28943E16193E2B3F005412CA /* Logos.h */,
-				28943E17193E2B3F005412CA /* Logos.m */,
+				28943E16193E2B3F005412CA /* LogoFactory.h */,
+				28943E17193E2B3F005412CA /* LogoFactory.m */,
 				28943E1C193E31F0005412CA /* Buttons.h */,
 				28943E1D193E31F0005412CA /* Buttons.m */,
 			);
@@ -310,32 +303,58 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		289DAA1C195313AE002E4B78 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				289DAA19195304A9002E4B78 /* NavFactory.h */,
+				289DAA1A195304A9002E4B78 /* NavFactory.m */,
+				28D19D68193F50B20098BEBD /* NavBar.h */,
+				28D19D69193F50B20098BEBD /* NavBar.m */,
+			);
+			name = Nav;
+			sourceTree = "<group>";
+		};
+		289DAA1D195313DD002E4B78 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				284E0CB91949E2CC0027B47A /* ProgressView.h */,
+				284E0CBA1949E2CC0027B47A /* ProgressView.m */,
+			);
+			name = Progress;
+			sourceTree = "<group>";
+		};
+		289DAA1E1953145D002E4B78 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				28943E10193E2A86005412CA /* TableHeights.h */,
+				28943E11193E2A86005412CA /* TableHeights.m */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
 		28D19D6B193F52440098BEBD /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				28D19D68193F50B20098BEBD /* NavBar.h */,
-				28D19D69193F50B20098BEBD /* NavBar.m */,
-				28943E03193E2141005412CA /* AccessoryView.h */,
-				28943E04193E2141005412CA /* AccessoryView.m */,
-				28943E09193E23D2005412CA /* ProgressViewCell.h */,
-				28943E0A193E23D2005412CA /* ProgressViewCell.m */,
+				289DAA1E1953145D002E4B78 /* Table */,
+				289DAA1D195313DD002E4B78 /* Progress */,
+				289DAA1C195313AE002E4B78 /* Nav */,
 				28D19D6D193F52C40098BEBD /* HeaderView.h */,
 				28D19D6E193F52C40098BEBD /* HeaderView.m */,
 			);
 			name = ViewComponents;
 			sourceTree = "<group>";
 		};
-		28D19D6C193F52790098BEBD /* ViewFunctionality */ = {
+		28D19D6C193F52790098BEBD /* CellFunctionality */ = {
 			isa = PBXGroup;
 			children = (
+				28943E03193E2141005412CA /* AccessoryView.h */,
+				28943E04193E2141005412CA /* AccessoryView.m */,
 				28943E06193E21F4005412CA /* RetractUp.h */,
 				28943E07193E21F4005412CA /* RetractUp.m */,
 				28943DFD193E1D43005412CA /* ExpandDown.h */,
 				28943DFE193E1D43005412CA /* ExpandDown.m */,
-				28943DFA193E1B2A005412CA /* DeleteRows.h */,
-				28943DFB193E1B2A005412CA /* DeleteRows.m */,
 			);
-			name = ViewFunctionality;
+			name = CellFunctionality;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,13 +463,11 @@
 			files = (
 				28943E08193E21F4005412CA /* RetractUp.m in Sources */,
 				28943E21193E3446005412CA /* SectionArrays.m in Sources */,
-				28943E0B193E23D2005412CA /* ProgressViewCell.m in Sources */,
-				28943E18193E2B3F005412CA /* Logos.m in Sources */,
+				28943E18193E2B3F005412CA /* LogoFactory.m in Sources */,
 				28D19D6A193F50B20098BEBD /* NavBar.m in Sources */,
 				284E0CBB1949E2CC0027B47A /* ProgressView.m in Sources */,
 				28943DD9193E189A005412CA /* ViewController.m in Sources */,
-				28943DFC193E1B2A005412CA /* DeleteRows.m in Sources */,
-				28943E0F193E29C7005412CA /* Fonts.m in Sources */,
+				28943E0F193E29C7005412CA /* FontFactory.m in Sources */,
 				28D19D67193F4E0F0098BEBD /* Menu.m in Sources */,
 				28943DFF193E1D43005412CA /* ExpandDown.m in Sources */,
 				28D19D6F193F52C40098BEBD /* HeaderView.m in Sources */,
@@ -460,6 +477,7 @@
 				28943E27193E3D8B005412CA /* MainCell.m in Sources */,
 				28943DD3193E189A005412CA /* AppDelegate.m in Sources */,
 				28943E15193E2ACA005412CA /* Color.m in Sources */,
+				289DAA1B195304A9002E4B78 /* NavFactory.m in Sources */,
 				28943DCF193E189A005412CA /* main.m in Sources */,
 				284E0CB71949D4530027B47A /* DropCell.m in Sources */,
 				28943E05193E2141005412CA /* AccessoryView.m in Sources */,

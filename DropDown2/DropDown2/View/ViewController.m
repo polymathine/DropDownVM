@@ -7,17 +7,15 @@
 //
 
 #import "ViewController.h"
-#import "RetractUp.h"
-#import "ExpandDown.h"
-#import "ProgressViewCell.h"
 #import "SectionArrays.h"
 #import "Color.h"
 #import "TableHeights.h"
 #import "MainCell.h"
 #import "Menu.h"
-#import "NavBar.h"
+#import "NavFactory.h"
 #import "HeaderView.h"
 #import "DropCell.h"
+#import "ProgressView.h"
 
 @interface ViewController ()
 @property (nonatomic, retain) NSMutableArray *sections;
@@ -29,6 +27,7 @@
 @property (nonatomic) NSInteger selectedSection;
 @property (nonatomic, strong) MainCell *mainCell;
 @property (nonatomic, strong) DropCell *dropCell;
+@property (nonatomic, strong) ProgressView *progressV;
 @end
 
 @implementation ViewController
@@ -50,6 +49,8 @@
     NSArray *sectionsArray = [Menu setMenuTitles];
     self.dictionary = [SectionArrays addArraysForEachSection:[sectionsArray count] fromSectionRowTitles:sectionsArray toArray:self.sections];
     
+    
+    /*
     //navBar
     self.navigationItem.hidesBackButton = YES;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
@@ -58,6 +59,9 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:[NavBar navBarButtonSetup] forState:UIControlStateNormal];
     //Font for Navigation Bar Title
     [[UINavigationBar appearance] setTitleTextAttributes:[NavBar navBarTitleSetup]];
+    */
+    
+    [NavFactory createHomeNav:self.navigationController];
     
     //design
     self.tableView.rowHeight = [TableHeights rowHeightTable];
@@ -66,7 +70,7 @@
     
     self.selectedSection = 1100;
     self.progressView.hidden = YES;
-    
+
     //self.but = [HeaderView headerButtonForView:self.tableView];
     //[self.view addSubview:self.but];
     
@@ -103,11 +107,9 @@
     }
     
     // Configure the cell.
-    
     self.theSection = [self.dictionary objectForKey:[NSString stringWithFormat:@"%li",(long)[indexPath section]]];
     self.mainCell = [[MainCell alloc] init];
     [self.mainCell configureMainCell:cell];
-    
     [[cell textLabel] setText:[self.theSection.currentTitles objectAtIndex:[indexPath row]]];
     
     //for all drop down parts of table change color of background so it's obvious
@@ -138,7 +140,6 @@
     if ([indexPath row] == 0 && self.theSection.down == NO)
     {
         self.selectedSection = indexPath.section;
-       // self.theSection.down = [ExpandDown expandSection:self.theSection forCell:cell atIndex:indexPath inTableView:self.tableView];
         self.theSection.down = [self.mainCell expandCellsFrom:cell];
         NSLog(@"down 2a? = %i", self.theSection.down);
     }
@@ -152,12 +153,10 @@
     }
     else if ([[self.theSection.currentTitles objectAtIndex:0] isEqual:@"Sync"] && (indexPath.row == 1))
     {
-        [ProgressViewCell addProgressView:self.progressView withWidth:self.view.frame.size.width andHeight:self.tableView.rowHeight];
-        [cell.contentView addSubview:self.progressView];
-        [ProgressViewCell addProgressLabel:self.progressLabel toView:self.view];
-        NSArray *toolbarItems = [ProgressViewCell createToolbarWithLabel:self.progressLabel];
-        [self setToolbarItems:toolbarItems animated:NO];
-        [ProgressViewCell startProgress:self.progressView inNavController:self.navigationController andView:self.tableView];
+        self.progressLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0 , 11.0f, (self.view.frame.size.width/2), 21.0f)];
+        self.progressV = [[ProgressView alloc] initProgressView:self.progressView inView:self.view withTableView:self.tableView withLabel:self.progressLabel andNavController:self.navigationController];
+        [self.progressV setUpProgressBarCell:cell];
+        [self.progressV launchProgressView];
     }
     else return;
 }
