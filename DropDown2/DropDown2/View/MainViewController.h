@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DropDownViewModel.h"
 
-@interface ViewController : UITableViewController
+@interface MainViewController : UITableViewController
+
+@property (nonatomic, strong) id<DropDownViewModel> viewModel;
 
 @end

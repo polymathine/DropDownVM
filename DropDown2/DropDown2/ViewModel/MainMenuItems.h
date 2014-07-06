@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Menus.h"
 
-@interface Menu : NSObject
-+(NSArray*)setMenuTitles;
+@interface MainMenuItems : NSObject <Menus>
+-(NSDictionary*)retrieveMenuTitles;
 @end

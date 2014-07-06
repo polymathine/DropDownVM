@@ -6,19 +6,17 @@
 //  Copyright (c) 2014 Abby Schlageter. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "SectionArrays.h"
+#import "MainViewController.h"
 #import "Color.h"
 #import "TableHeights.h"
 #import "MainCell.h"
-#import "Menu.h"
 #import "NavFactory.h"
 #import "HeaderView.h"
 #import "DropCell.h"
 #import "ProgressView.h"
 
-@interface ViewController ()
-@property (nonatomic, retain) NSMutableArray *sections;
+
+@interface MainViewController ()
 @property (nonatomic, retain) NSDictionary *dictionary;
 @property (nonatomic, retain) Sections *theSection;
 @property (nonatomic, retain) IBOutlet UIProgressView *progressView;
@@ -28,9 +26,10 @@
 @property (nonatomic, strong) MainCell *mainCell;
 @property (nonatomic, strong) DropCell *dropCell;
 @property (nonatomic, strong) ProgressView *progressV;
+
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,22 +43,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //get Menu titles
-    self.sections = [[NSMutableArray alloc] initWithCapacity:10];
-    NSArray *sectionsArray = [Menu setMenuTitles];
-    self.dictionary = [SectionArrays addArraysForEachSection:[sectionsArray count] fromSectionRowTitles:sectionsArray toArray:self.sections];
     
-    
-    /*
-    //navBar
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-    self.navigationController.navigationBar.translucent = YES; //for below iOS 7
-    //Font for Bar Button Items
-    [[UIBarButtonItem appearance] setTitleTextAttributes:[NavBar navBarButtonSetup] forState:UIControlStateNormal];
-    //Font for Navigation Bar Title
-    [[UINavigationBar appearance] setTitleTextAttributes:[NavBar navBarTitleSetup]];
-    */
+    self.dictionary = self.viewModel.dictionary;
     
     [NavFactory createHomeNav:self.navigationController];
     
@@ -86,7 +71,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [self.sections count];
+    return [self.dictionary count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
